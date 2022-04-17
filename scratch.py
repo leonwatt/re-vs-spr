@@ -1,0 +1,1 @@
+print("abc".startswith("a"))

@@ -126,77 +126,77 @@ CONFIG = [
     },
     {
         "key": "rotterdam",
-        "station_id": "",
+        "station_id": "8400530",
         "name": "Rotterdam Centraal",
         "region": "ZH",
         "country": "NL"
     },
     {
         "key": "eindhoven",
-        "station_id": "",
+        "station_id": "8400206",
         "name": "Eindhoven Centraal",
         "region": "NB",
         "country": "NL"
     },
     {
         "key": "zwolle",
-        "station_id": "",
+        "station_id": "8400747",
         "name": "Zwolle",
         "region": "OV",
         "country": "NL"
     },
     {
         "key": "groningen",
-        "station_id": "",
+        "station_id": "8400263",
         "name": "Groningen",
         "region": "GR",
         "country": "NL"
     },
     {
         "key": "arnhem",
-        "station_id": "",
+        "station_id": "8400071",
         "name": "Arnhem Centraal",
         "region": "GD",
         "country": "NL"
     },
     {
         "key": "vlissingen",
-        "station_id": "",
+        "station_id": "8400652",
         "name": "Vlissingen",
         "region": "ZL",
         "country": "NL"
     },
     {
         "key": "maastricht",
-        "station_id": "",
+        "station_id": "8400424",
         "name": "Maastricht",
         "region": "LB",
         "country": "NL"
     },
     {
         "key": "almere",
-        "station_id": "",
+        "station_id": "8400080",
         "name": "Almere Centrum",
         "region": "FL",
         "country": "NL"
     },
     {
         "key": "leeuwarden",
-        "station_id": "",
+        "station_id": "8400387",
         "name": "Leeuwarden",
         "region": "FR",
         "country": "NL"
     },
     {
         "key": "utrecht",
-        "station_id": "",
+        "station_id": "8400621",
         "name": "Utrecht Centraal",
         "region": "UT",
         "country": "NL"
     },
     {
         "key": "assen",
-        "station_id": "",
+        "station_id": "8400073",
         "name": "Assen",
         "region": "DR",
         "country": "NL"

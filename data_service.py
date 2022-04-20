@@ -25,6 +25,8 @@ def fetch_stops(dep, country_prefix = None):
         "name": st["stop"]["name"],
         "id": st["stop"]["id"],
         "location": (st["stop"]["location"]["latitude"], st["stop"]["location"]["longitude"]),
+        "arrival": st["plannedArrival"],
+        "departure": st["plannedDeparture"],
     } for st in response["stopovers"] if country_prefix == None or st["stop"]["id"].startswith(country_prefix)]
 
 

@@ -1,4 +1,5 @@
 import csv
+import json
 
 DATE_FORMAT = "%Y-%m-%dT%H:%M:%S"
 
@@ -13,6 +14,9 @@ def write_to_file(path, content):
 def read_csv(path, delimiter = ","):
     with open(path) as f:
         return list(csv.DictReader(f, delimiter=delimiter))
+
+def read_json(path):
+    return json.loads(read_from_file(path))
 
 def write_csv(path, content):
     with open(path, "w") as f:

@@ -123,7 +123,7 @@ def line_plot(data, x, y = None, count_y = False, display_percentage = False, di
         fig.savefig(save_to)
 
 
-def box_plot(data, x, size = None, title = None, hide_labels = False, x_tick_labels = None, save_to = None):
+def box_plot(data, x, size = None, title = None, hide_labels = False, x_tick_labels = None, as_violin = False, save_to = None):
     fig, ax = plt.subplots(figsize=size)
     mpl.style.use("seaborn")
 
@@ -133,9 +133,14 @@ def box_plot(data, x, size = None, title = None, hide_labels = False, x_tick_lab
         x_vals = generate_values(data, x, count_y=True)[0]
 
     ax.set_title(title)
-    ax.boxplot(x_vals)
+    
+    if as_violin: 
+        ax.violinplot(x_vals, showmedians=True)
+    else: ax.boxplot(x_vals)
 
     if x_tick_labels != None:
+        if as_violin:
+            x_tick_labels = [""] + x_tick_labels
         ax.set_xticklabels(x_tick_labels)
 
     if hide_labels:
@@ -147,4 +152,6 @@ def box_plot(data, x, size = None, title = None, hide_labels = False, x_tick_lab
     if save_to != None:
         fig.savefig(save_to)
 
-# box_plot([[1,2,2,3], [2,2,2,2,2,2]], x=lambda a: a, save_to="test.png", x_tick_labels=["A", "B"], x_label="a", y_label="b")
+
+
+# violin_plot([[1,2,2,3], [2,2,2,2,2,1]], x=lambda a: a, save_to="test.png", x_tick_labels=["A", "B"])

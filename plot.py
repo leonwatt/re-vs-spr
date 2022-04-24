@@ -1,10 +1,6 @@
-from cProfile import label
-from smtplib import LMTP
-import seaborn as sns
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import numpy as np
 
 def format_percentage(value):
     return f"{round(value * 100)}%"
@@ -139,8 +135,7 @@ def box_plot(data, x, size = None, title = None, hide_labels = False, x_tick_lab
     else: ax.boxplot(x_vals)
 
     if x_tick_labels != None:
-        if as_violin:
-            x_tick_labels = [""] + x_tick_labels
+        if as_violin: ax.set_xticks([i + 1 for i in range(0, len(x_tick_labels))])
         ax.set_xticklabels(x_tick_labels)
 
     if hide_labels:
@@ -154,4 +149,4 @@ def box_plot(data, x, size = None, title = None, hide_labels = False, x_tick_lab
 
 
 
-# violin_plot([[1,2,2,3], [2,2,2,2,2,1]], x=lambda a: a, save_to="test.png", x_tick_labels=["A", "B"])
+# box_plot([[1,2,2,3], [2,2,2,2,2,1]], x=lambda a: a, save_to="test.png", x_tick_labels=["A", "B"], as_violin=True)
